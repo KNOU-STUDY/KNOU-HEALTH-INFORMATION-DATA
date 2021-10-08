@@ -13,3 +13,13 @@ boxplot(
     col = 2:4,
     names = c('개복 수술', '복강경 수술', '로봇 수술')
 )
+points(
+    c(
+        mean(open_surgery),
+        mean(laparoscopic_surgery),
+        mean(robot_sergery)
+    ),
+    pch = 10,
+    cex = 2,
+    col = 5:7,
+)

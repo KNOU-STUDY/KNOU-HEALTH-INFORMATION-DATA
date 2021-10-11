@@ -2,17 +2,11 @@ data <- read.table('./ch3/담즙-과포화비율자료.txt', header = T, fileEnc
 data
 attach(data)
 par(mfrow = c(2, 1))
-plot(
-  data$`과포화비율`,
-  type = 'p',
-  xlab = '자료',
-  ylab = '담즙과포화비율',
-  main = '담즙과포화비율',
-)
-plot(
-  data$`과포화비율`,
-  type = 'h',
-  xlab = '자료',
-  ylab = '담즙과포화비율',
-  main = '담즙과포화비율',
-)
+#합
+sum(data$`과포화비율`)
+#누적합
+cumsum(data$`과포화비율`)
+#평균
+mean(data$`과포화비율`)
+#중간값
+median(data$`과포화비율`)

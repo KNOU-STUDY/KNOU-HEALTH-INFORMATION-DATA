@@ -10,3 +10,5 @@ cumsum(data$`과포화비율`)
 mean(data$`과포화비율`)
 #중간값
 median(data$`과포화비율`)
+#10% 절삭평균
+mean(data$`과포화비율`, trim = 1 / 10)

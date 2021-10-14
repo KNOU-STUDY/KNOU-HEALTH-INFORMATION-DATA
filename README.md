@@ -1,1 +1,2 @@
 # KNOU-HEALTH-INFORMATION-DATA
+* ch의 기준은 책입니다.

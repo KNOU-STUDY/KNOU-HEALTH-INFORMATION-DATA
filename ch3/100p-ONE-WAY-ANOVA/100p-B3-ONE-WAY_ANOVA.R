@@ -48,4 +48,16 @@ rate <- c(
   retard
 )
 group <- factor(rep(c('자폐아', '정상아', '지진아'), c(length(autistic), length(normal), length(retard))))
-aov(rate~group)
+aov_result <- aov(rate ~ group)
+
+par(mfrow = c(2, 2))
+plot(aov_result)
+fligner.test(rate ~ group)
+
+# residual = 잔차
+par(mfrow = c(1, 1))
+residual <- residuals(aov_result)
+qqnorm(residual, col = 2)
+qqline(residual, lty = 2, col = 3)
+shapiro.test(residual)
+
